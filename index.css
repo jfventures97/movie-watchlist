@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.main-container {
+    height: 779px;
+    width: 550px;
+    margin: 0 auto;
+
+}
+
+.top-container {
+    height: 208px;
+    width: 550px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;      /* center horizontally */
+    align-items: center;          /* center vertically */ 
+    gap: 80px;    
+    background-image: url(images/background-picture.png);
+    background-position: 20% 20%;
+    color: white;
+    
+    
+      /* add a dark overlay */
+  background-color: rgba(0, 0, 0, 0.7); /* black with 50% opacity */
+  background-blend-mode: darken; /* or multiply, overlay, etc. */
+}
+
+
+.top-container h1 {
+    font-size: 42.79px;
+    font-weight: 800;
+
+}
+
+.top-container h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
