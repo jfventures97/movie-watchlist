@@ -85,11 +85,52 @@ html, body {
 .movie-container {
     height: 571px;
     background-color: #ffffff;
-  display: flex;
-  flex-direction: column;   /* stack image on top of text */
-  justify-content: center;  /* vertical centering */
-  align-items: center;      /* horizontal centering */
-  height: 100%;             /* make sure container has height */
-  text-align: center;       /* center text inside <p> */
+  overflow: scroll;
 
+}
+
+.inner-movie-container {
+    width: 464px;
+    padding: 20px;
+}
+
+.movie-card, .first-row, .second-row {
+    display: flex;
+
+}
+
+.poster-image {
+    width: 99px ;
+    height: 147.41px;
+}
+
+.first-row {
+    display: ;
+}
+
+.font18 {
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.font12 {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.movie-card {
+    width: 462px;
+    max-height: 147.41px;
+    padding: 20px;
+    gap: 20px
+}
+
+.right-side {
+    height: 147.41px;
+    
 }
