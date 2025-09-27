@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    background-color: black;
 }
 
 .main-container {
@@ -22,6 +23,7 @@ html, body {
     background-image: url(images/background-picture.png);
     background-position: 20% 20%;
     color: white;
+     position: relative;
     
     
       /* add a dark overlay */
@@ -40,4 +42,54 @@ html, body {
     font-size: 14px;
     margin-bottom: 5px;
     font-weight: 700;
+}
+
+.search-box {
+     position: absolute;
+    bottom: -19px;  /* half of search-box height (38px / 2 = 19px) */
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
+    
+    display: flex;
+    align-items: center;
+    
+    /* optional: add a shadow so it stands out */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.search-bar {
+    width: 342px;
+    height: 38px;
+    border: 1px solid #D1D5DB;   /* fixed your border syntax */
+    border-right: none;          /* remove right border so it merges with button */
+    border-radius: 6px 0 0 6px;  /* round only left corners */
+    padding: 0 10px;
+    outline: none;               /* optional: remove blue outline */
+    color: #6B7280;
+    font-weight: 500;
+
+    
+  padding-left: 35px;  /* space so text doesn’t overlap icon */
+
+}
+
+.search-button {
+    height: 38px;
+    width: 120px;
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;   /* fixed border syntax */
+    border-radius: 0 6px 6px 0;  /* round only right corners */
+    cursor: pointer;
+}
+
+.movie-container {
+    height: 571px;
+    background-color: #ffffff;
+  display: flex;
+  flex-direction: column;   /* stack image on top of text */
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  height: 100%;             /* make sure container has height */
+  text-align: center;       /* center text inside <p> */
+
 }
