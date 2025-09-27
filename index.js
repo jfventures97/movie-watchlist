@@ -15,6 +15,12 @@ searchButton.addEventListener('click', function(){
     <div id='movie-poster'>
         <img src=${data.Search[0].Poster}> 
     </div>
+    <div id='movie-info-container'>
+        <div id='row-one'>
+        <h1>${data.Search[0].Title}</h1>
+        <p>${data.Search[0].review} </p>
+        </div>
+    </div>
     `
     }
 ) } )
