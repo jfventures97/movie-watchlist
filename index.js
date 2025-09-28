@@ -5,12 +5,12 @@ const movieContainer= document.getElementById('inner-movie-container')
 
 searchButton.addEventListener('click', function(){
 
-    fetch("http://www.omdbapi.com/?apikey=8092a520&s=blade+runner")
+    fetch("https://www.omdbapi.com/?apikey=8092a520&s=blade+runner")
     .then(res=> res.json())
     .then(data => { 
         movieContainer.innerHTML ="";
         data.Search.forEach(movie=> {
-            fetch(`http://www.omdbapi.com/?apikey=8092a520&i=${movie.imdbID}&plot=short`)
+            fetch(`https://www.omdbapi.com/?apikey=8092a520&i=${movie.imdbID}&plot=short`)
             .then(res=>res.json())
             .then(details => {
 
