@@ -105,17 +105,23 @@ html, body {
 }
 
 .first-row {
-    display: ;
+   gap: 10px;
+}
+
+.second-row {
+    gap: 10px;
 }
 
 .font18 {
     font-size: 18px;
     margin-bottom: 0;
     margin-top: 0;
+    font-weight: 500;
 }
 
 .font12 {
     font-size: 12px;
+    margin-top: 5px;
     margin-bottom: 0;
 }
 
