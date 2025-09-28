@@ -106,10 +106,15 @@ html, body {
 
 .first-row {
    gap: 10px;
+   padding-top: 10px;
 }
 
 .second-row {
     gap: 10px;
+}
+
+.third-row { 
+    padding-bottom: 10px;
 }
 
 .font18 {
@@ -125,7 +130,7 @@ html, body {
     margin-bottom: 0;
 }
 
-.font14 {
+.plot {
     font-size: 14px;
 }
 
@@ -140,3 +145,21 @@ html, body {
     height: 147.41px;
     
 }
+
+.plot {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plot.expanded {
+  -webkit-line-clamp: unset; /* remove clamping when expanded */
+}
+.read-more {
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+}
+

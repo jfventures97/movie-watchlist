@@ -13,6 +13,11 @@ searchButton.addEventListener('click', function(){
             fetch(`http://www.omdbapi.com/?apikey=8092a520&i=${movie.imdbID}&plot=short`)
             .then(res=>res.json())
             .then(details => {
+
+                const plotText = details.Plot;
+                const hasLongPlot = plotText.length > 30; // adjust threshold
+
+
                 console.log(details)
                 movieContainer.innerHTML+= `
                 <div class="movie-card">
@@ -29,7 +34,12 @@ searchButton.addEventListener('click', function(){
                                         <p class="font12"> ${details.Runtime} </p>
                                         <p class="font12"> ${details.Genre} </p>
                                     </div>
-                                    <p class="font14">${details.Plot}</p>
+                                    <div class="third-row">
+  <p class="plot">
+    ${plotText}
+    ${hasLongPlot ? '<span class="read-more">... Read more</span>' : ""}
+  </p>
+</div>
                                 </div>
                             </div>
                 `
@@ -37,6 +47,18 @@ searchButton.addEventListener('click', function(){
             })
         } )
 
-    
+    movieContainer.addEventListener("click", function(e) {
+  if (e.target.classList.contains("read-more")) {
+    const plot = e.target.previousElementSibling;
+    plot.classList.toggle("expanded");  
+
+    if (plot.classList.contains("expanded")) {
+      e.target.textContent = "Read less";
+    } else {
+      e.target.textContent = "Read more";
+    }
+  }
+});
+
     }
 ) } )
